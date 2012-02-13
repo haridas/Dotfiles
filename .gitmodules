@@ -1,3 +1,12 @@
 [submodule "vim-files/vim/bundle/command-t"]
 	path = vim-files/vim/bundle/command-t
 	url = git://git.wincent.com/command-t.git
+[submodule "vim-files/vim/bundle/nerdtree"]
+	path = vim-files/vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vim-files/vim/bundle/gundo"]
+	path = vim-files/vim/bundle/gundo
+	url = https://github.com/sjl/gundo.vim.git
+[submodule "vim-files/vim/bundle/simple-pairs"]
+	path = vim-files/vim/bundle/simple-pairs
+	url = https://github.com/vim-scripts/simple-pairs.git
