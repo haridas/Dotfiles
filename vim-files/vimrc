@@ -31,6 +31,7 @@ set ruler
 set backspace=indent,eol,start
 set laststatus=2
 "set relativenumber
+set number
 set norelativenumber
 "set undofile
 set shell=/bin/bash
@@ -82,17 +83,16 @@ set formatoptions=qrn1
 "set list
 set listchars=tab:▸\ ,eol:¬
 
-
 " Naviagations using keys up/down/left/right
 " Disabling default keys to learn the hjkl
 nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
+"inoremap <up> <nop>
+"inoremap <down> <nop>
+"inoremap <left> <nop>
+"inoremap <right> <nop>
 nnoremap j gj
 nnoremap k gk
 
