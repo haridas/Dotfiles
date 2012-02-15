@@ -137,4 +137,20 @@ inoremap jj <ESC>
 "Working with split screen nicely.
 
 " Adding Colorschems
-"colorscheme 
+" colorscheme badwolf
+
+" GVim settings
+" Removing scrollbars
+if has("gui_running")
+    set guitablabel=%-0.12t%M
+    set guioptions-=T
+    set guioptions-=r 
+    set guioptions-=L 
+    set guioptions+=a
+    set guioptions-=m
+    colo badwolf
+    set listchars=tab:▸\ ,eol:¬         " Invisibles using the Textmate style
+endif
+
+" Source the vimrc file after saving it
+autocmd bufwritepost .vimrc source ~/.vimrc
