@@ -16,3 +16,12 @@
 [submodule "vim-files/vim/bundle/nerdcommenter"]
 	path = vim-files/vim/bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "vim-files/vim/bundle/ack"]
+	path = vim-files/vim/bundle/ack
+	url = https://github.com/mileszs/ack.vim.git
+[submodule "vim-files/vim/bundle/snipmate"]
+	path = vim-files/vim/bundle/snipmate
+	url = https://github.com/msanders/snipmate.vim.git
+[submodule "vim-files/vim/bundle/sparkup"]
+	path = vim-files/vim/bundle/sparkup
+	url = https://github.com/rstacruz/sparkup.git
