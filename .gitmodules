@@ -13,3 +13,6 @@
 [submodule "vim-files/vim/bundle/minibufexpl"]
 	path = vim-files/vim/bundle/minibufexpl
 	url = https://github.com/fholgado/minibufexpl.vim.git
+[submodule "vim-files/vim/bundle/nerdcommenter"]
+	path = vim-files/vim/bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
