@@ -77,7 +77,8 @@ vnoremap <tab> %
 set wrap
 set textwidth=79
 set formatoptions=qrn1
-"set colorcolumn=79
+set colorcolumn=79
+colorschem desert
 
 " To  show special characters in Vim
 "set list
@@ -133,7 +134,6 @@ nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 inoremap jj <ESC>
 
 
-
 "=== Working with split screen nicely ===
 " Resize Split When the window is resized"
 au VimResized * :wincmd =
@@ -173,7 +173,7 @@ if has("gui_running")
     set guioptions-=r 
     set guioptions-=L 
     set guioptions+=a
-    set guioptions-=m
+    set guioptions+=m
     colo badwolf
     set listchars=tab:▸\ ,eol:¬         " Invisibles using the Textmate style
 endif
