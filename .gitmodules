@@ -25,3 +25,6 @@
 [submodule "vim-files/vim/bundle/sparkup"]
 	path = vim-files/vim/bundle/sparkup
 	url = https://github.com/rstacruz/sparkup.git
+[submodule "vim-files/vim/bundle/rope-vim"]
+	path = vim-files/vim/bundle/rope-vim
+	url = git://github.com/klen/rope-vim.git

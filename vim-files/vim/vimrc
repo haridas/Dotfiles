@@ -58,6 +58,8 @@ let g:miniBufExplModSelTarget = 1
 " Mapping to NERDTree
 nnoremap <C-n> :NERDTreeToggle<cr>
 
+map <leader>y "*y
+set mouse=a
 
 "Settings for Searching and Moving
 nnoremap / /\v
