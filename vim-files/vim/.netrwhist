@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/mnt/data/company/mquotient/workspace/boxcite/deploy'
+let g:netrw_dirhist_2='/usr/lib/hal/scripts'
+let g:netrw_dirhist_3='/usr/share/vim/vimcurrent'
+let g:netrw_dirhist_4='/usr/share/vim/vim73/lang'
+let g:netrw_dirhist_5='/mnt/data/company/mquotient/workspace/boxcite/conf'
+let g:netrw_dirhist_6='/mnt/data/company/mquotient/workspace/gitosis-admin'
+let g:netrw_dirhist_7='/usr/local/lib/python2.7/dist-packages/django/contrib/admin/views'
+let g:netrw_dirhist_8='/mnt/data/projects/workspace/haridas.in/deploy'
+let g:netrw_dirhist_9='/mnt/data/company/mquotient/workspace/glyfix/glyfix-unstable/glyfix/apps/trainer'

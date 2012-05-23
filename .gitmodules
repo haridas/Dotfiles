@@ -28,3 +28,6 @@
 [submodule "vim-files/vim/bundle/rope-vim"]
 	path = vim-files/vim/bundle/rope-vim
 	url = git://github.com/klen/rope-vim.git
+[submodule "vim-files/vim/bundle/syntastic"]
+	path = vim-files/vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
