@@ -105,6 +105,9 @@ inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
+" Enable Syntax checker "
+"nnoremap <leader>c SyntasticCheckToggle<cr>
+
 " Map : to ; also in command mode.
 nnoremap ; :
 
