@@ -31,3 +31,6 @@
 [submodule "vim-files/vim/bundle/syntastic"]
 	path = vim-files/vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "vim-files/vim/bundle/snipmate.vim"]
+	path = vim-files/vim/bundle/snipmate.vim
+	url = https://github.com/msanders/snipmate.vim.git
