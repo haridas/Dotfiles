@@ -201,4 +201,10 @@ let g:miniBufExplModSelTarget = 1
 imap <leader>j <ESC>:RopeGotoDefinition<cr>
 nmap <leader>j <ESC>:RopeGotoDefinition<cr>
 
+" Tagbar key bindings."
+nmap <leader>l <ESC>:TagbarToggle<cr>
+imap <leader>l <ESC>:TagbarToggle<cr>i
+
+
 " =========== END Plugin Settings =========="
+"
