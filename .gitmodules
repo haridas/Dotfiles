@@ -1,9 +1,6 @@
 [submodule "vim-files/vim/bundle/nerdtree"]
 	path = vim-files/vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule "vim-files/vim/bundle/gundo"]
-	path = vim-files/vim/bundle/gundo
-	url = https://github.com/sjl/gundo.vim.git
 [submodule "vim-files/vim/bundle/simple-pairs"]
 	path = vim-files/vim/bundle/simple-pairs
 	url = https://github.com/vim-scripts/simple-pairs.git
@@ -13,15 +10,6 @@
 [submodule "vim-files/vim/bundle/nerdcommenter"]
 	path = vim-files/vim/bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
-[submodule "vim-files/vim/bundle/ack"]
-	path = vim-files/vim/bundle/ack
-	url = https://github.com/mileszs/ack.vim.git
-#[submodule "vim-files/vim/bundle/snipmate"]
-#	path = vim-files/vim/bundle/snipmate
-#	url = https://github.com/msanders/snipmate.vim.git
-[submodule "vim-files/vim/bundle/sparkup"]
-	path = vim-files/vim/bundle/sparkup
-	url = https://github.com/rstacruz/sparkup.git
 [submodule "vim-files/vim/bundle/rope-vim"]
 	path = vim-files/vim/bundle/rope-vim
 	url = git://github.com/klen/rope-vim.git
