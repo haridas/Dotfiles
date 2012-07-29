@@ -1,0 +1,27 @@
+[submodule "vim-files/vim/bundle/nerdtree"]
+	path = vim-files/vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vim-files/vim/bundle/simple-pairs"]
+	path = vim-files/vim/bundle/simple-pairs
+	url = https://github.com/vim-scripts/simple-pairs.git
+[submodule "vim-files/vim/bundle/minibufexpl"]
+	path = vim-files/vim/bundle/minibufexpl
+	url = https://github.com/fholgado/minibufexpl.vim.git
+[submodule "vim-files/vim/bundle/nerdcommenter"]
+	path = vim-files/vim/bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "vim-files/vim/bundle/rope"]
+	path = vim-files/vim/bundle/rope
+	url = git://github.com/klen/rope-vim.git
+[submodule "vim-files/vim/bundle/snipmate"]
+	path = vim-files/vim/bundle/snipmate
+	url = https://github.com/msanders/snipmate.vim.git
+[submodule "vim-files/vim/bundle/syntastic"]
+	path = vim-files/vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "vim-files/vim/bundle/tagbar"]
+	path = vim-files/vim/bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git
+[submodule "vim-files/vim/bundle/fugitive"]
+	path = vim-files/vim/bundle/fugitive
+	url = https://github.com/tpope/vim-fugitive.git
