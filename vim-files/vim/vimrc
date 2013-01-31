@@ -77,8 +77,7 @@ vnoremap <tab> %
 set wrap
 set textwidth=79
 set formatoptions=qrn1
-set colorcolumn=79
-colorschem desert
+"set colorcolumn=79
 
 " To  show special characters in Vim
 "set list
@@ -175,9 +174,15 @@ if has("gui_running")
     set guioptions-=r
     set guioptions-=L
     set guioptions+=a
-    set guioptions+=m
+    set guioptions-=m
     colo badwolf
     set listchars=tab:▸\ ,eol:¬         " Invisibles using the Textmate style
+endif
+
+" Special Settings for Consoles
+if !has("gui_running")
+    set t_Co=256
+    colorschem badwolf
 endif
 
 " Source the vimrc file after saving it
@@ -190,6 +195,7 @@ endif
 
 " Mapping to NERDTree
 nnoremap <C-n> :NERDTreeToggle<cr>
+let NERDTreeIgnore=['\.vim$', '\~$', '\.pyc$']
 
 " Mini Buffer some settigns."
 let g:miniBufExplMapWindowNavVim = 1

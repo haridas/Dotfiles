@@ -79,7 +79,6 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    alias qitcom='cd /mnt/data/projects/workspace/qitcom-remote/FahrasQatar'
     alias dir='dir --color=auto'
     alias vdir='vdir --color=auto'
 
@@ -92,6 +91,7 @@ if [ -x /usr/bin/dircolors ]; then
     # User Specific aliases.
     alias mq='cd /mnt/data/company/mquotient/'
     alias glyfix='cd /mnt/data/company/mquotient/workspace/glyfix/glyfix-unstable'
+    alias cgw='cd /mnt/data/company/mquotient/workspace/alcatel/cgw/'
     alias projects='cd /mnt/data/projects/'
     alias coursera='cd /mnt/data/projects/coursera/'
     alias backup='cd /mnt/backup/'
@@ -139,9 +139,21 @@ export EC2_CERT=~/.ssh/cert-CZ7O3MN6KGVJGWC33P3NPGOYTKD6UOJT.pem
 
 ### Scala Global Settings.
 PATH=$PATH:/mnt/data/projects/coursera/scala/packages/sbt/bin
+# play framework command.
+PATH=$PATH:/mnt/data/softwares/play-2.0.4
 
 
 ### Go Language environment settings.
 export GOROOT=/mnt/data/projects/pgrm_demos/go/packages/go-source/
 PATH=$PATH:$GOROOT/bin
  
+
+export PERL_LOCAL_LIB_ROOT="/root/perl5";
+export PERL_MB_OPT="--install_base /root/perl5";
+export PERL_MM_OPT="INSTALL_BASE=/root/perl5";
+export PERL5LIB="/root/perl5/lib/perl5/x86_64-linux-gnu-thread-multi:/root/perl5/lib/perl5";
+export PATH="/root/perl5/bin:$PATH";
+
+
+export WORKON_HOME="~/.virtualenvs"
+source /usr/local/bin/virtualenvwrapper.sh
