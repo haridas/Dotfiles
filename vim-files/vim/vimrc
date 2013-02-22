@@ -26,7 +26,7 @@ set wildmenu
 set wildmode=list:longest
 set visualbell
 
-"set cursorline
+set cursorline
 set ttyfast
 set ruler
 set backspace=indent,eol,start
@@ -128,7 +128,7 @@ nnoremap <leader>v V`]
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 
 " jj For Qicker Escaping between normal and editing mode.
-inoremap jj <ESC>
+"inoremap jj <ESC>
 
 
 " Working with split screen nicely
@@ -177,13 +177,16 @@ if has("gui_running")
     set guioptions-=m
     colo badwolf
     set listchars=tab:▸\ ,eol:¬         " Invisibles using the Textmate style
-endif
-
-" Special Settings for Consoles
-if !has("gui_running")
+else
     set t_Co=256
     colorschem badwolf
 endif
+
+" Special Settings for Consoles
+"if !has("gui_running")
+"    set t_Co=256
+"    colorschem badwolf
+"endif
 
 " Source the vimrc file after saving it
 "autocmd bufwritepost .vimrc source ~/.vimrc

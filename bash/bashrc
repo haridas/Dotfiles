@@ -90,7 +90,7 @@ if [ -x /usr/bin/dircolors ]; then
 
     # User Specific aliases.
     alias mq='cd /mnt/data/company/mquotient/'
-    alias glyfix='cd /mnt/data/company/mquotient/workspace/glyfix/glyfix-unstable'
+    alias glyfix='cd /mnt/data/company/mquotient/workspace/glyfix; activate; cd glyfix-unstable'
     alias cgw='cd /mnt/data/company/mquotient/workspace/alcatel/cgw/'
     alias projects='cd /mnt/data/projects/'
     alias coursera='cd /mnt/data/projects/coursera/'
@@ -99,6 +99,10 @@ if [ -x /usr/bin/dircolors ]; then
 
     alias github='cd /mnt/data/projects/github/'
     alias blog='cd /mnt/data/projects/github/haridas.github.com/'
+
+    # Python virtual env alias 
+    alias activate='test -d ENV && source ./ENV/bin/activate || echo "No Virtualenv in the current folder"'
+    alias mkenv='test -d ENV && echo "Already exists" || virtualenv --system-site-packages ENV; activate'
 
 
 fi
