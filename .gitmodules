@@ -13,9 +13,6 @@
 [submodule "vim-files/vim/bundle/rope"]
 	path = vim-files/vim/bundle/rope
 	url = git://github.com/klen/rope-vim.git
-[submodule "vim-files/vim/bundle/snipmate"]
-	path = vim-files/vim/bundle/snipmate
-	url = https://github.com/msanders/snipmate.vim.git
 [submodule "vim-files/vim/bundle/syntastic"]
 	path = vim-files/vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git

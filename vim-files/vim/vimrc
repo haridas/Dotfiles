@@ -3,6 +3,8 @@
 " Pathogen settings.
 filetype off
 call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
+Helptags
 filetype plugin indent on
 
 " Make vim incompatbile to vi.
@@ -45,8 +47,7 @@ set matchtime=3
 let mapleader = ","
 
 " Set title to window
-set title
-
+set title 
 " Dictionary path, from which the words are being looked up.
 set dictionary=/usr/share/dict/words
 
@@ -213,6 +214,11 @@ nmap <leader>j <ESC>:RopeGotoDefinition<cr>
 " Tagbar key bindings."
 nmap <leader>l <ESC>:TagbarToggle<cr>
 imap <leader>l <ESC>:TagbarToggle<cr>i
+
+" Snipmate remap settings. It's binding overwritten standard
+" bindings.
+" Snipmate using bellow VIM's default keys, just unmap it.
+
 
 
 " =========== END Plugin Settings =========="
