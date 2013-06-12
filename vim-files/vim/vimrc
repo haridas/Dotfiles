@@ -28,7 +28,7 @@ set wildmenu
 set wildmode=list:longest
 set visualbell
 
-set cursorline
+"set cursorline
 set ttyfast
 set ruler
 set backspace=indent,eol,start
@@ -45,7 +45,7 @@ set matchtime=3
 
 "Changing Leader Key
 let mapleader = ","
-
+""""
 " Set title to window
 set title 
 " Dictionary path, from which the words are being looked up.
@@ -70,8 +70,8 @@ set incsearch
 set showmatch
 set hlsearch
 nnoremap <leader><space> :noh<cr>
-nnoremap <tab> %
-vnoremap <tab> %
+"nnoremap <tab> %
+"vnoremap <tab> %
 
 
 " Make Vim to handle long lines nicely.
@@ -106,7 +106,7 @@ nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
 " Map : to ; also in command mode.
-nnoremap ; :
+"nnoremap ; :
 
 " Set vim to save the file on focus out.
 au FocusLost * :wa
@@ -114,7 +114,7 @@ au FocusLost * :wa
 " Adding More Shorcuts keys using leader kye.
 " Leader Kye provide separate namespace for specific commands.
 ",W Command to remove white space from a file.
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+""nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 " ,ft Fold tag, helpful for HTML editing.
 nnoremap <leader>ft vatzf
@@ -152,7 +152,7 @@ set wildignore+=migrations "Django migrations"
 set wildignore+=*.pyc "Python Object codes"
 set wildignore+=*.orig "Merge resolution files"
 
-" Make Sure that Vim returns to the same line when we reopen a file"
+"Make Sure that Vim returns to the same line when we reopen a file"
 augroup line_return
     au!
     au BufReadPost *
@@ -208,17 +208,18 @@ let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
 
 " Rope Plugin settings
+"
 imap <leader>j <ESC>:RopeGotoDefinition<cr>
 nmap <leader>j <ESC>:RopeGotoDefinition<cr>
 
 " Tagbar key bindings."
-nmap <leader>l <ESC>:TagbarToggle<cr>
-imap <leader>l <ESC>:TagbarToggle<cr>i
+"nmap <leader>l <ESC>:TagbarToggle<cr>
+"imap <leader>l <ESC>:TagbarToggle<cr>i
 
 " Snipmate remap settings. It's binding overwritten standard
 " bindings.
 " Snipmate using bellow VIM's default keys, just unmap it.
-
+" autocmd VimEnter * unmap! <C-i>
 
 
 " =========== END Plugin Settings =========="
