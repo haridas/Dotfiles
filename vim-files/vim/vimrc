@@ -207,14 +207,17 @@ let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
 
+" Tab color settings to make it more visible.
+hi MBEChanged ctermfg=white
+hi MBENormal ctermfg=white
+
 " Rope Plugin settings
-"
-imap <leader>j <ESC>:RopeGotoDefinition<cr>
+" imap <leader>j <ESC>:RopeGotoDefinition<cr>
 nmap <leader>j <ESC>:RopeGotoDefinition<cr>
 
 " Tagbar key bindings."
-"nmap <leader>l <ESC>:TagbarToggle<cr>
-"imap <leader>l <ESC>:TagbarToggle<cr>i
+nmap <leader>l <ESC>:TagbarToggle<cr>
+imap <leader>l <ESC>:TagbarToggle<cr>i
 
 " Snipmate remap settings. It's binding overwritten standard
 " bindings.
