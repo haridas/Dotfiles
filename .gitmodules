@@ -28,3 +28,6 @@
 [submodule "vim-files/vim/bundle/jedi-vim"]
 	path = vim-files/vim/bundle/jedi-vim
 	url = git://github.com/davidhalter/jedi-vim.git
+[submodule "vim-files/vim/bundle/Command-T"]
+	path = vim-files/vim/bundle/Command-T
+	url = git@github.com:wincent/Command-T.git
