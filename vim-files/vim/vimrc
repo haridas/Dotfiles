@@ -27,6 +27,7 @@ set hidden
 set wildmenu
 set wildmode=list:longest
 set visualbell
+syntax on
 
 "set cursorline
 set ttyfast
@@ -181,6 +182,7 @@ if has("gui_running")
 else
     set t_Co=256
     colorschem badwolf
+    "colorschem torte
 endif
 
 " Special Settings for Consoles
