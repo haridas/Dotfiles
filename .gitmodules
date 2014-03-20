@@ -12,7 +12,7 @@
 	url = https://github.com/scrooloose/nerdcommenter.git
 [submodule "vim-files/vim/bundle/rope"]
 	path = vim-files/vim/bundle/rope
-	url = git://github.com/klen/rope-vim.git
+	url = https://github.com/klen/rope-vim.git
 [submodule "vim-files/vim/bundle/syntastic"]
 	path = vim-files/vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
@@ -27,4 +27,4 @@
     url = https://github.com/wincent/Command-T
 [submodule "vim-files/vim/bundle/jedi-vim"]
 	path = vim-files/vim/bundle/jedi-vim
-	url = git://github.com/davidhalter/jedi-vim.git
+	url = https://github.com/davidhalter/jedi-vim.git
