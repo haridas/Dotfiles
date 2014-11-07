@@ -60,6 +60,7 @@ set backupskip=/tmp/*,/private/tmp/*"
 
 " Enable Mouse
 set mouse=a
+"set smartindent
 
 "Settings for Searching and Moving
 nnoremap / /\v
@@ -77,9 +78,9 @@ nnoremap <leader><space> :noh<cr>
 
 " Make Vim to handle long lines nicely.
 set wrap
-set textwidth=79
+set textwidth=80
 set formatoptions=qrn1
-"set colorcolumn=79
+set colorcolumn=80
 
 " To  show special characters in Vim
 "set list
@@ -95,8 +96,8 @@ nnoremap <right> <nop>
 "inoremap <down> <nop>
 "inoremap <left> <nop>
 "inoremap <right> <nop>
-nnoremap j gj
-nnoremap k gk
+"nnoremap j gj
+"nnoremap k gk
 
 " Rope settings."
 inoremap <leader>j <ESC>:RopeGotoDefinition<cr>
@@ -167,6 +168,56 @@ nnoremap g; g;zz
 " =========== END Basic Vim Settings ===========
 
 
+" >>> Special binding rules <<<
+
+" > Folding the leftcolumn toggle. < "
+nnoremap <leader>f :call FoldColumnToggle()<cr>
+
+" direct mapping may disable other mappings done on this keybinding.
+"imap <leader>f :call FoldColumnToggle()<cr>
+
+function! FoldColumnToggle()
+    if &foldcolumn
+        setlocal foldcolumn=0
+    else
+        setlocal foldcolumn=4
+    endif
+endfunction
+
+" > Quick Fix Toggle to see the quickfix window < "
+nnoremap <leader>q :call QuickFixToggle()<cr>
+
+" Global variable keeping track of the state of the quick fix window.
+let g:quickfix_is_open = 0
+
+function! QuickFixToggle()
+    if g:quickfix_is_open
+        cclose
+        let g:quickfix_is_open = 0
+        execute g:quickfix_return_to_window . "wincmd w"
+    else
+        let g:quickfix_return_to_window = winnr()
+        copen
+        let g:quickfix_is_open = 1
+    endif
+endfunction
+
+" > Spell checker Toggler <
+nnoremap <leader>c :call SpellChecker()<cr>
+
+let g:spell_checker_is_active = 0
+function! SpellChecker()
+    if g:spell_checker_is_active
+        setlocal spell spelllang=
+        let g:spell_checker_is_active = 0
+    else
+        setlocal spell spelllang=en_us
+        let g:spell_checker_is_active = 1
+    endif
+endfunction
+
+" >>> END Special binding rules <<<
+
 " =========== Gvim Settings =============
 
 " Removing scrollbars
@@ -177,19 +228,18 @@ if has("gui_running")
     set guioptions-=L
     set guioptions+=a
     set guioptions-=m
-    colo badwolf
     set listchars=tab:▸\ ,eol:¬         " Invisibles using the Textmate style
+
+    set guifont=Cousine\ 10
 else
     set t_Co=256
-    colorschem badwolf
-    "colorschem torte
 endif
 
-" Special Settings for Consoles
-"if !has("gui_running")
-"    set t_Co=256
-"    colorschem badwolf
-"endif
+set background=dark
+"let g:solarized_termcolors=256
+colorscheme badwolf
+
+
 
 " Source the vimrc file after saving it
 "autocmd bufwritepost .vimrc source ~/.vimrc
