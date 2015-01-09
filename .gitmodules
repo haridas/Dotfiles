@@ -28,3 +28,6 @@
 [submodule "vim-files/vim/bundle/Command-T"]
 	path = vim-files/vim/bundle/Command-T
 	url = https://github.com/wincent/Command-T
+[submodule "vim-files/vim/bundle/vim-go"]
+	path = vim-files/vim/bundle/vim-go
+	url = https://github.com/fatih/vim-go.git
