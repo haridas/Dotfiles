@@ -1,0 +1,8 @@
+alias quixey='cd ~/projects/quixey #; source env/bin/activate;'
+alias fastapi='cd ~/projects/quixey/fastapi; source virtualenv/bin/activate'
+alias personal='cd ~/projects/personal'
+alias gow='cd ~/projects/personal/go-workspace'
+alias konsole='konsole --hide-tabbar --fullscreen --hide-menubar'
+
+alias tmux='TERM=xterm-256color tmux'
+alias get_battery_status='upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage | grep -oE "[0-9]{1,3}%"'
