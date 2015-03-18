@@ -52,4 +52,11 @@ projects.
 Screenshots
 -----------
 
+.. image:: ./screenshots/vim.png
+        :alt: Vim-screenshot-1
+
+.. image:: ./screenshots/vim1.png
+      :alt: vim-screenshots-2
+      
+
 Thank you.
