@@ -28,3 +28,6 @@
 [submodule "vim-files/vim/bundle/vim-go"]
 	path = vim-files/vim/bundle/vim-go
 	url = https://github.com/fatih/vim-go.git
+[submodule "vim-files/vim/bundle/rust.vim"]
+	path = vim-files/vim/bundle/rust.vim
+	url = https://github.com/rust-lang/rust.vim.git

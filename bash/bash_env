@@ -1,0 +1,11 @@
+# Environment variables and other exported variabled.
+#
+
+# 
+# GO Environment variables.
+#
+export GOROOT=/home/haridas/projects/personal/software/go
+export GOPATH=/home/haridas/projects/personal/go-workspace
+export PATH=$GOPATH/bin:$GOPATH/bin:$PATH
+
+
