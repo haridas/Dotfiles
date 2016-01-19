@@ -31,3 +31,6 @@
 [submodule "vim-files/vim/bundle/rust.vim"]
 	path = vim-files/vim/bundle/rust.vim
 	url = https://github.com/rust-lang/rust.vim.git
+[submodule "vim-files/vim/bundle/ultisnips"]
+	path = vim-files/vim/bundle/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
