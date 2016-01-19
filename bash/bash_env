@@ -4,8 +4,18 @@
 # 
 # GO Environment variables.
 #
-export GOROOT=/home/haridas/projects/personal/software/go
+export GOROOT=/home/haridas/softwares/Languages/go
 export GOPATH=/home/haridas/projects/personal/go-workspace
-export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 
+
+# Gradle path.
+export GRADLE_HOME=/home/haridas/softwares/Tools/gradle-2.9
+
+# Nodejs path.
+NODEJS_BIN_PATH=/mnt/data/softwares/node-v4.2.3-linux-x64/bin
+
+#
+# Export the updated system path.
+#
+export PATH=$GOROOT/bin:$GOPATH/bin:$NODEJS_BIN_PATH:$GRADLE_HOME/bin:$PATH
 

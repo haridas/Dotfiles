@@ -1,8 +1,16 @@
 alias quixey='cd ~/projects/quixey #; source env/bin/activate;'
+alias rpx='cd ~/projects/RPX; source ENV/bin/activate;'
+alias hari='source ~/ENV-hari/bin/activate;'
+alias blog='cd ~/projects/personal/github/haridas.github.com'
 alias fastapi='cd ~/projects/quixey/fastapi; source virtualenv/bin/activate'
 alias personal='cd ~/projects/personal'
+alias projects='cd ~/projects'
 alias gow='cd ~/projects/personal/go-workspace'
 alias konsole='konsole --hide-tabbar --fullscreen --hide-menubar'
 
 alias tmux='TERM=xterm-256color tmux'
 alias get_battery_status='upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage | grep -oE "[0-9]{1,3}%"'
+
+# Load the Custom environments.
+
+source ~/.bash_env
