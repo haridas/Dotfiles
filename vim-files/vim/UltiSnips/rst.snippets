@@ -1,0 +1,25 @@
+global !p
+from snippet_helpers import get_double_line_break
+endglobal
+
+# For Blog header.
+snippet header
+${1:Blog title}
+`!p 
+snip.rv = get_double_line_break(len(t[1]))	
+`
+
+:date: ${2: `date +%Y-%m-%d`}
+:category: blog
+:tags: $3
+
+$0
+endsnippet
+
+# Code block expansion.
+snippet codeb
+.. code-block:: $1
+
+$2
+
+endsnippet
