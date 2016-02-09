@@ -34,3 +34,9 @@
 [submodule "vim-files/vim/bundle/ultisnips"]
 	path = vim-files/vim/bundle/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
+[submodule "vim-files/vim/bundle/YouCompleteMe"]
+	path = vim-files/vim/bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "vim-files/vim/bundle/ternjs"]
+	path = vim-files/vim/bundle/ternjs
+	url = https://github.com/ternjs/tern_for_vim.git

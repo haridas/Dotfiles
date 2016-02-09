@@ -153,6 +153,7 @@ set wildignore+=*.luac "Lua byte code"
 set wildignore+=migrations "Django migrations"
 set wildignore+=*.pyc "Python Object codes"
 set wildignore+=*.orig "Merge resolution files"
+set wildignore+=node_modules "Exclude node modules.
 
 "Make Sure that Vim returns to the same line when we reopen a file"
 augroup line_return
@@ -237,7 +238,7 @@ endif
 
 set background=dark
 "let g:solarized_termcolors=256
-colorscheme badwolf
+colorscheme vitamins
 
 
 
