@@ -40,3 +40,9 @@
 [submodule "vim-files/vim/bundle/ternjs"]
 	path = vim-files/vim/bundle/ternjs
 	url = https://github.com/ternjs/tern_for_vim.git
+[submodule "vim-files/vim/bundle/vim-ansible-yaml"]
+	path = vim-files/vim/bundle/vim-ansible-yaml
+	url = https://github.com/chase/vim-ansible-yaml.git
+[submodule "vim-files/vim/bundle/ack"]
+	path = vim-files/vim/bundle/ack
+	url = https://github.com/mileszs/ack.vim.git
