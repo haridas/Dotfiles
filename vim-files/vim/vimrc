@@ -153,7 +153,14 @@ set wildignore+=*.luac "Lua byte code"
 set wildignore+=migrations "Django migrations"
 set wildignore+=*.pyc "Python Object codes"
 set wildignore+=*.orig "Merge resolution files"
-set wildignore+=node_modules "Exclude node modules.
+set wildignore+=node_modules/** "Exclude node modules.
+set wildignore+=ENV "Exclude python virtual environments.
+set wildignore+=build/** "Any build folders.
+
+" Custom project specific ignores
+set wildignore+=paper-web/**
+set wildignore+=insight/**
+set wildignore+=static/**
 
 "Make Sure that Vim returns to the same line when we reopen a file"
 augroup line_return
@@ -238,7 +245,7 @@ endif
 
 set background=dark
 "let g:solarized_termcolors=256
-colorscheme vitamins
+colorscheme badwolf
 
 
 
@@ -282,7 +289,7 @@ imap <leader>l <ESC>:TagbarToggle<cr>i
 "
 
 " Add the virtualenv's site-packages to vim path
-py << EOF
+py3 << EOF
 import os.path
 import sys
 import vim
@@ -290,5 +297,21 @@ if 'VIRTUAL_ENV' in os.environ:
     project_base_dir = os.environ['VIRTUAL_ENV']
     sys.path.insert(0, project_base_dir)
     activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-    execfile(activate_this, dict(__file__=activate_this))
+    with open(activate_this, 'r') as f:
+        exec(f.read(), dict(__file__=activate_this))
 EOF
+
+" make YCM compatible with UltiSnips
+" let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+" let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+" let g:SuperTabDefaultCompletionType = '<C-n>'
+"  
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+
+" ACK using ag as the searcher.
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
