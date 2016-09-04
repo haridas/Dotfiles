@@ -128,36 +128,6 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-##### Amazon Web Service Settings.
-
-PATH=$PATH:/mnt/data/company/mquotient/aws/ec2-api-tools-1.5.5.0/bin:/mnt/data/company/mquotient/aws/AutoScaling-1.0.49.1/bin
-
-# - env settings.
-export EC2_HOME=/mnt/data/company/mquotient/aws/ec2-api-tools-1.5.5.0
-export AWS_AUTO_SCALING_HOME=/mnt/data/company/mquotient/aws/AutoScaling-1.0.49.1
-export JAVA_HOME=/usr/lib/jvm/java-6-sun-1.6.0.26
-export AWS_CLOUDWATCH_HOME=$EC2_HOME
-export EC2_PRIVATE_KEY=~/.ssh/pk-CZ7O3MN6KGVJGWC33P3NPGOYTKD6UOJT.pem
-export EC2_CERT=~/.ssh/cert-CZ7O3MN6KGVJGWC33P3NPGOYTKD6UOJT.pem
-
-
-### Scala Global Settings.
-PATH=$PATH:/mnt/data/projects/coursera/scala/packages/sbt/bin
-# play framework command.
-PATH=$PATH:/mnt/data/softwares/play-2.0.4
-
-
 ### Go Language environment settings.
 export GOROOT=/mnt/data/projects/pgrm_demos/go/packages/go-source/
 PATH=$PATH:$GOROOT/bin
- 
-
-export PERL_LOCAL_LIB_ROOT="/root/perl5";
-export PERL_MB_OPT="--install_base /root/perl5";
-export PERL_MM_OPT="INSTALL_BASE=/root/perl5";
-export PERL5LIB="/root/perl5/lib/perl5/x86_64-linux-gnu-thread-multi:/root/perl5/lib/perl5";
-export PATH="/root/perl5/bin:$PATH";
-
-
-export WORKON_HOME="~/.virtualenvs"
-source /usr/local/bin/virtualenvwrapper.sh
