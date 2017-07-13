@@ -128,6 +128,12 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-### Go Language environment settings.
-export GOROOT=/mnt/data/projects/pgrm_demos/go/packages/go-source/
-PATH=$PATH:$GOROOT/bin
+###-tns-completion-start-###
+if [ -f /home/haridas/.tnsrc ]; then 
+    source /home/haridas/.tnsrc 
+fi
+###-tns-completion-end-###
+export NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:/mnt/data/softwares/Languages/node/lib/node_modules
+
+
+. /mnt/data/projects/DataScience/torch/install/bin/torch-activate

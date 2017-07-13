@@ -12,7 +12,7 @@ export GOPATH=/home/haridas/projects/personal/go-workspace
 export GRADLE_HOME=/home/haridas/softwares/Tools/gradle-2.9
 
 # Nodejs path.
-NODEJS_BIN_PATH=/home/haridas/softwares/Languages/node-v5.5.0-linux-x64/bin
+NODEJS_BIN_PATH=/home/haridas/softwares/Languages/node/bin
 
 #Android SDK
 ANDROID_HOME=/home/haridas/Android/Sdk
