@@ -12,18 +12,23 @@ filetype plugin indent on
 "==================== Vim Plug manager configurations ======================
 " List of plugins 
 " ==========================================================================
+"
+" Core plugins.
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'https://github.com/mileszs/ack.vim.git'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'fholgado/minibufexpl.vim' " Short-form supported.
-Plug 'https://github.com/fholgado/minibufexpl.vim.git'
 Plug 'https://github.com/scrooloose/syntastic.git'
+
+" Language plugins.
 Plug 'https://github.com/fatih/vim-go.git', { 'for': 'go'}
 Plug 'https://github.com/rust-lang/rust.vim.git', { 'for': 'rust' }
 Plug 'https://github.com/chase/vim-ansible-yaml.git'
-Plug 'https://github.com/mileszs/ack.vim.git'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+
+" Vim theme related.
 Plug 'altercation/vim-colors-solarized'
 Plug 'bling/vim-airline'
+"Plug 'fholgado/minibufexpl.vim' " Short-form supported.
 "Plug 'https://github.com/scrooloose/nerdcommenter.git'
 "Plug 'https://github.com/klen/rope-vim.git', { 'for': 'python'}
 "Plug 'https://github.com/majutsushi/tagbar.git'
