@@ -2,10 +2,43 @@
 
 " Pathogen settings.
 filetype off
-call pathogen#runtime_append_all_bundles()
-call pathogen#infect()
-Helptags
+"call pathogen#runtime_append_all_bundles()
+"call pathogen#infect()
+call plug#begin('~/.vim/plugged')
+"Helptags
 filetype plugin indent on
+
+
+"==================== Vim Plug manager configurations ======================
+" List of plugins 
+" ==========================================================================
+"
+" Core plugins.
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'https://github.com/mileszs/ack.vim.git'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'https://github.com/scrooloose/syntastic.git'
+
+" Language plugins.
+Plug 'https://github.com/fatih/vim-go.git', { 'for': 'go'}
+Plug 'https://github.com/rust-lang/rust.vim.git', { 'for': 'rust' }
+Plug 'https://github.com/chase/vim-ansible-yaml.git'
+
+" Vim theme related.
+Plug 'altercation/vim-colors-solarized'
+Plug 'bling/vim-airline'
+"Plug 'fholgado/minibufexpl.vim' " Short-form supported.
+"Plug 'https://github.com/scrooloose/nerdcommenter.git'
+"Plug 'https://github.com/klen/rope-vim.git', { 'for': 'python'}
+"Plug 'https://github.com/majutsushi/tagbar.git'
+"Plug 'https://github.com/davidhalter/jedi-vim.git'
+"Plug 'https://github.com/wincent/Command-T'
+"Plug 'https://github.com/SirVer/ultisnips.git'
+
+call plug#end()
+
+" ==============================================================
 
 " Make vim incompatbile to vi.
 set nocompatible
@@ -44,6 +77,12 @@ set shell=/bin/bash
 set lazyredraw
 set matchtime=3
 
+" Window navigation.
+:nmap <silent> <C-h> :wincmd h<CR>
+:nmap <silent> <C-j> :wincmd j<CR>
+:nmap <silent> <C-k> :wincmd k<CR>
+:nmap <silent> <C-l> :wincmd l<CR>
+
 "Changing Leader Key
 let mapleader = ","
 """"
@@ -81,6 +120,7 @@ set wrap
 set textwidth=80
 set formatoptions=qrn1
 set colorcolumn=80
+
 
 " To  show special characters in Vim
 "set list
@@ -243,9 +283,14 @@ else
     set t_Co=256
 endif
 
+"set background=dark
+"colorscheme badwolf
+
+let g:solarized_termcolors=256
+
+syntax enable
 set background=dark
-"let g:solarized_termcolors=256
-colorscheme badwolf
+colorscheme solarized
 
 
 
@@ -285,21 +330,18 @@ imap <leader>l <ESC>:TagbarToggle<cr>i
 " autocmd VimEnter * unmap! <C-i>
 
 
-" =========== END Plugin Settings =========="
-"
-
 " Add the virtualenv's site-packages to vim path
-py3 << EOF
-import os.path
-import sys
-import vim
-if 'VIRTUAL_ENV' in os.environ:
-    project_base_dir = os.environ['VIRTUAL_ENV']
-    sys.path.insert(0, project_base_dir)
-    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-    with open(activate_this, 'r') as f:
-        exec(f.read(), dict(__file__=activate_this))
-EOF
+"py << EOF
+"import os.path
+"import sys
+"import vim
+"if 'VIRTUAL_ENV' in os.environ:
+"    project_base_dir = os.environ['VIRTUAL_ENV']
+"    sys.path.insert(0, project_base_dir)
+"    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+"    with open(activate_this, 'r') as f:
+"        exec(f.read(), dict(__file__=activate_this))
+"EOF
 
 " make YCM compatible with UltiSnips
 " let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
@@ -307,11 +349,20 @@ EOF
 " let g:SuperTabDefaultCompletionType = '<C-n>'
 "  
 " better key bindings for UltiSnipsExpandTrigger
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+"let g:UltiSnipsUsePythonVersion = 2
+"let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsJumpForwardTrigger="<c-j>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 
 " ACK using ag as the searcher.
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
+" FZF plugin  mapping settings.
+nmap ; :Buffers<CR>
+nmap <Leader>t :Files<CR>
+nmap <Leader>r :Tags<CR>
+
+
+" =========== END Plugin Settings =========="
+"
