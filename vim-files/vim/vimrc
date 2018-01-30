@@ -18,7 +18,8 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'https://github.com/mileszs/ack.vim.git'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'https://github.com/scrooloose/syntastic.git'
+"Plug 'https://github.com/scrooloose/syntastic.git'
+Plug 'https://github.com/w0rp/ale.git'
 
 " Language plugins.
 Plug 'https://github.com/fatih/vim-go.git', { 'for': 'go'}
@@ -363,6 +364,15 @@ nmap ; :Buffers<CR>
 nmap <Leader>t :Files<CR>
 nmap <Leader>r :Tags<CR>
 
+"" ALE
+let g:ale_statusline_format = ['☀️️ %d', '🕯️ %d', '']
+let g:ale_fix_on_save = 1
+
+let g:ale_fixers = { 'javascript': ['prettier', 'eslint'] }
+let g:ale_linters = { 'javascript': ['eslint'] }
+
+let g:ale_javascript_prettier_use_local_config = 1
+"let g:ale_javascript_eslint_executable = '/Users/haridas/.nvm/versions/node/v6.11.5/bin/eslint'
 
 " =========== END Plugin Settings =========="
 "
