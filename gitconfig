@@ -1,0 +1,25 @@
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[core]
+	longpaths = true
+	autocrlf = false
+	editor = vim
+[push]
+	default = simple
+[user]
+	email = haridas.nss@gmail.com
+	name = Haridas Narayanaswamy
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = true
+  pager = true
+[alias]
+    l = log --graph --oneline --decorate
+    ll = log --graph --oneline --decorate --branches --tags
+    lll = log --graph --oneline --decorate --all
