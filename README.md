@@ -4,6 +4,24 @@ My Dot Files
 This repository keeps all of my Dot files, which are compatible with Gnu/Linux
 machines. It includes dot files for VIM and Bash right now.
 
+Quick Setup
+===========
+
+Gnu/Linux Environment
+--------------------
+
+```bash
+wget -q https://raw.githubusercontent.com/haridas/Dotfiles/master/linux-setup.sh -O - | bash
+
+```
+
+Mac
+---
+
+```bash
+wget -q https://raw.githubusercontent.com/haridas/Dotfiles/master/mac-setup.sh -O - | bash
+```
+
 Vim Environment
 ---------------
 
