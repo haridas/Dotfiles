@@ -4,15 +4,12 @@ DOT_PROJECT_HOME_ZIP=~/Dotfiles-master.zip
 
 if [ ! -d $DOT_PROJECT_HOME ]
 then
-    lget https://github.com/haridas/Dotfiles/archive/master.zip -O $DOT_PROJECT_HOME_ZIP
+    wget https://github.com/haridas/Dotfiles/archive/master.zip -O $DOT_PROJECT_HOME_ZIP
     mkdir $DOT_PROJECT_HOME
     unzip $DOT_PROJECT_HOME_ZIP -d ~/
     rm $DOT_PROJECT_HOME_ZIP
 fi
 
-
-# Got to Git repo
-cd
 
 # Check the file exists or not.
 if [ ! -d ~/.vim ]
@@ -27,6 +24,5 @@ fi
 
 # Install plugins.
 vim -c :PlugInstall -c :qa
-
 
 echo "Congrats !, your Dev environment is ready."
