@@ -17,9 +17,13 @@ then
     ln -s $DOT_PROJECT_HOME/vim-files/vim ~/.vim
 fi
 
+
 if [ ! -e ~/.tmux.conf ]
 then
-    ln -s $DOT_PROJECT_HOME/tmux.conf ~/.tmux.conf
+    ln -s $DOT_PROJECT_HOME/tmux.conf.local ~/.tmux.conf.local
+    git clone https://github.com/gpakosz/.tmux ~/.tmux
+    ln -s ~/.tmux/.tmux.conf ~/.tmux.conf
+
 fi
 
 # Install plugins.
