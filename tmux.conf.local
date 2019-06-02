@@ -294,6 +294,16 @@ unbind C-a
 # move status line to top
 set -g status-position top
 
-
 set -g base-index 0           # start windows numbering at 1
 setw -g pane-base-index 0     # make pane numbering consistent with windows
+set -g repeat-time 50         # Disable prefix once keystroke given, wait only given ms
+
+# window navigation
+bind -r n next-window
+bind -r p previous-window     # select next window
+unbind C-h
+unbind C-l
+
+#bind -r C-h previous-window # select previous window
+#bind -r C-l next-window     # select next window
+#bind Tab last-window        # move to last active window
