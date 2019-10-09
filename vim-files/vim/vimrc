@@ -375,4 +375,7 @@ let g:ale_javascript_prettier_use_local_config = 1
 "let g:ale_javascript_eslint_executable = '/Users/haridas/.nvm/versions/node/v6.11.5/bin/eslint'
 
 " =========== END Plugin Settings =========="
-"
+
+" Automatically remove the trailing white space on a given file. helps to keep
+" clean git history.
+autocmd BufWritePre *.py,*cpp,*.c %s/\ \+$//e
