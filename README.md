@@ -1,29 +1,33 @@
-My Dot Files
-============
+# My Dot Files
 
 This repository keeps all of my Dot files, which are compatible with Gnu/Linux
-machines. It includes dot files for VIM and Bash right now.
+and Mac OSX machines. Also includes automation scripts to easily setup and cleanup
+the environments.
 
-Quick Setup
-===========
+## Quick Setup
 
-Gnu/Linux Environment
---------------------
+### Gnu/Linux Environment
 
 ```bash
 wget -q https://raw.githubusercontent.com/haridas/Dotfiles/master/linux-setup.sh -O - | bash
 
 ```
 
-Mac
----
+### Mac
 
 ```bash
 wget -q https://raw.githubusercontent.com/haridas/Dotfiles/master/mac-setup.sh -O - | bash
 ```
 
-Vim Environment
----------------
+## Cleanup the existing installation
+
+```bash
+
+wget -q https://raw.githubusercontent.com/haridas/Dotfiles/master/uninstall.sh -O - | bash
+
+```
+
+## Vim Environment
 
 My VIM was initially setup for developing python projects. But lately I added 
 support for golang and scala, by default vim can be used for editing any text
@@ -49,15 +53,15 @@ If any of you are interested to try out my vim setup you can run the following
 command to install this vim setup.
 
 
-How to Install
---------------
+## How to Install
+
 
 Read installation steps given on my blog
 - http://haridas.in/vim-as-your-ide.html#setup-vim-from-scratch
 
 
-More Details
-------------
+## More Details
+
 I wrote a blog post to explain more about vim environment setup and make it look
 like an IDE. You can read it from this link - http://haridas.in/vim-as-your-ide.html
 
@@ -66,15 +70,5 @@ there right now on my github repo. Some of them are removed because it doesn't
 help much and some other plugins are being added to work with new
 projects.
 
-
-Screenshots
------------
-
-.. image:: ./screenshots/vim.png
-        :alt: Vim-screenshot-1
-
-.. image:: ./screenshots/vim1.png
-      :alt: vim-screenshots-2
-      
 
 Thank you.
