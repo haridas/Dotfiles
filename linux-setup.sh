@@ -3,6 +3,7 @@ DOT_PROJECT_HOME=~/Dotfiles-master
 DOT_PROJECT_HOME_ZIP=~/Dotfiles-master.zip
 
 if [ ! -d $DOT_PROJECT_HOME ]
+
 then
     wget https://github.com/haridas/Dotfiles/archive/master.zip -O $DOT_PROJECT_HOME_ZIP
     mkdir $DOT_PROJECT_HOME
@@ -12,7 +13,7 @@ fi
 
 
 # Check the file exists or not.
-if [ ! -d ~/.vim ]
+if [  ! -d ~/.vim ]
 then
     ln -s $DOT_PROJECT_HOME/vim-files/vim ~/.vim
 fi
