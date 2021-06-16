@@ -2,6 +2,9 @@
 DOT_PROJECT_HOME=~/Dotfiles-master
 DOT_PROJECT_HOME_ZIP=~/Dotfiles-master.zip
 
+# Install dependencis
+sudo apt-get install wget unzip -y
+
 if [ ! -d $DOT_PROJECT_HOME ]
 
 then
