@@ -42,7 +42,7 @@ tmux_conf_new_session_prompt=false
 # RGB 24-bit colour support (tmux >= 2.2), possible values are:
 #  - true
 #  - false (default)
-tmux_conf_theme_24b_colour=false
+tmux_conf_24b_colour=true
 
 # window style
 tmux_conf_theme_window_fg='default'
@@ -267,7 +267,7 @@ tmux_conf_theme_clock_style='24'
 #   - false (default)
 # on macOS, this requires installing reattach-to-user-namespace, see README.md
 # on Linux, this requires xsel or xclip
-tmux_conf_copy_to_os_clipboard=false
+tmux_conf_copy_to_os_clipboard=true
 
 
 # -- user customizations -------------------------------------------------------
@@ -275,6 +275,14 @@ tmux_conf_copy_to_os_clipboard=false
 
 # increase history size
 set -g history-limit 10000
+
+# True-color (24-bit) support
+# 'tmux-256color' advertises the Tc capability natively
+set -g default-terminal "tmux-256color"
+# Pass true-color through from the outer terminal (Ghostty, iTerm2, etc.)
+set -as terminal-features ',xterm-ghostty:RGB'
+set -as terminal-features ',xterm-256color:RGB'
+
 
 # start with mouse mode enabled
 #set -g mouse on
@@ -294,13 +302,13 @@ unbind C-a
 # move status line to top
 set -g status-position top
 
-set -g base-index 0           # start windows numbering at 1
-setw -g pane-base-index 0     # make pane numbering consistent with windows
-set -g repeat-time 50         # Disable prefix once keystroke given, wait only given ms
+set -g base-index 0           # start windows numbering at 0
+setw -g pane-base-index 0     # start pane numbering at 0, consistent with windows
+set -g repeat-time 400        # ms window for repeating -r bindings (e.g. n/p) without re-pressing prefix
 
 # window navigation
 bind -r n next-window
-bind -r p previous-window     # select next window
+bind -r p previous-window     # select previous window
 unbind C-h
 unbind C-l
 

@@ -19,10 +19,10 @@ Plug 'junegunn/fzf.vim'
 Plug 'https://github.com/mileszs/ack.vim.git'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 "Plug 'https://github.com/scrooloose/syntastic.git'
-Plug 'https://github.com/w0rp/ale.git'
+"Plug 'https://github.com/w0rp/ale.git'
 
 " Language plugins.
-Plug 'https://github.com/fatih/vim-go.git', { 'for': 'go'}
+"Plug 'https://github.com/fatih/vim-go.git', { 'for': 'go'}
 Plug 'https://github.com/rust-lang/rust.vim.git', { 'for': 'rust' }
 Plug 'https://github.com/chase/vim-ansible-yaml.git'
 
@@ -291,7 +291,7 @@ let g:solarized_termcolors=256
 
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme badwolf
 
 
 
