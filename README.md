@@ -6,25 +6,30 @@ the environments.
 
 ## Quick Setup
 
-### Gnu/Linux Environment
-
-```bash
-wget -q https://raw.githubusercontent.com/haridas/Dotfiles/master/linux-setup.sh -O - | bash
-
-```
-
 ### Mac
 
 ```bash
-wget -q https://raw.githubusercontent.com/haridas/Dotfiles/master/mac-setup.sh -O - | bash
+curl -fsSL https://raw.githubusercontent.com/haridas/Dotfiles/master/mac-setup.sh | bash
 ```
+
+### Gnu/Linux (Debian/Ubuntu)
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/haridas/Dotfiles/master/linux-setup.sh | bash
+```
+
+Both install the OS packages (git, tmux, vim, fish, linters) and then run
+`install.sh`, which clones this repo to `~/Dotfiles`, installs/updates
+[Oh my tmux](https://github.com/gpakosz/.tmux), symlinks `~/.tmux.conf`,
+`~/.tmux.conf.local` and `~/.vim`, and installs vim plugins. It is safe to
+re-run: existing files are moved aside as `<file>.bak-<timestamp>`.
+
+Already cloned? Just run `~/Dotfiles/install.sh`.
 
 ## Cleanup the existing installation
 
 ```bash
-
-wget -q https://raw.githubusercontent.com/haridas/Dotfiles/master/uninstall.sh -O - | bash
-
+~/Dotfiles/uninstall.sh
 ```
 
 ## Vim Environment

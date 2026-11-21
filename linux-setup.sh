@@ -1,36 +1,16 @@
-#!/bin/bash
-DOT_PROJECT_HOME=~/Dotfiles-master
-DOT_PROJECT_HOME_ZIP=~/Dotfiles-master.zip
+#!/usr/bin/env bash
+# GNU/Linux (Debian/Ubuntu) bootstrap:
+#   curl -fsSL https://raw.githubusercontent.com/haridas/Dotfiles/master/linux-setup.sh | bash
+set -euo pipefail
 
-# Install dependencis
-sudo apt-get install wget unzip -y
+# Core tools. ncurses-term provides the tmux-256color terminfo;
+# xclip lets Oh my tmux copy to the system clipboard.
+sudo apt-get update -q
+sudo apt-get install -y git curl tmux vim fish ncurses-term xclip flake8 pylint
 
-if [ ! -d $DOT_PROJECT_HOME ]
-
-then
-    wget https://github.com/haridas/Dotfiles/archive/master.zip -O $DOT_PROJECT_HOME_ZIP
-    mkdir $DOT_PROJECT_HOME
-    unzip $DOT_PROJECT_HOME_ZIP -d ~/
-    rm $DOT_PROJECT_HOME_ZIP
+DOTFILES_DIR="${DOTFILES_DIR:-$HOME/Dotfiles}"
+if [ -x "$DOTFILES_DIR/install.sh" ]; then
+    exec "$DOTFILES_DIR/install.sh"
+else
+    curl -fsSL https://raw.githubusercontent.com/haridas/Dotfiles/master/install.sh | bash
 fi
-
-
-# Check the file exists or not.
-if [  ! -d ~/.vim ]
-then
-    ln -s $DOT_PROJECT_HOME/vim-files/vim ~/.vim
-fi
-
-
-if [ ! -e ~/.tmux.conf ]
-then
-    ln -s $DOT_PROJECT_HOME/tmux.conf.local ~/.tmux.conf.local
-    git clone https://github.com/gpakosz/.tmux ~/.tmux
-    ln -s ~/.tmux/.tmux.conf ~/.tmux.conf
-
-fi
-
-# Install plugins.
-vim -c :PlugInstall -c :qa
-
-echo "Congrats !, your Dev environment is ready."

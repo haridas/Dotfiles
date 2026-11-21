@@ -1,13 +1,26 @@
-# Install brew
-#
-test -x brew || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+#!/usr/bin/env bash
+# macOS bootstrap:
+#   curl -fsSL https://raw.githubusercontent.com/haridas/Dotfiles/master/mac-setup.sh | bash
+set -euo pipefail
 
-# install basic packages
-#
-brew install python3 tmux git wget
+# Install Homebrew if missing (Apple Silicon: /opt/homebrew, Intel: /usr/local)
+if ! command -v brew >/dev/null 2>&1; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+for prefix in /opt/homebrew /usr/local; do
+    [ -x "$prefix/bin/brew" ] && eval "$("$prefix/bin/brew" shellenv)" && break
+done
 
-# for python linting.
-pip3 install flake8 pylint
+# Core tools. ncurses provides the tmux-256color terminfo.
+# Python linters come from brew: pip3 install into brew's python is blocked (PEP 668).
+brew install git tmux vim fish ncurses flake8 pylint
 
-# Other parts are same as the linux setup.
-wget -q https://raw.githubusercontent.com/haridas/Dotfiles/master/linux-setup.sh -O - | bash
+# Ghostty ships its own terminfo; install the app if you want it:
+#   brew install --cask ghostty
+
+DOTFILES_DIR="${DOTFILES_DIR:-$HOME/Dotfiles}"
+if [ -x "$DOTFILES_DIR/install.sh" ]; then
+    exec "$DOTFILES_DIR/install.sh"
+else
+    curl -fsSL https://raw.githubusercontent.com/haridas/Dotfiles/master/install.sh | bash
+fi
